@@ -3578,7 +3578,7 @@ negotiator@0.4.7:
   resolved "https://registry.npmjs.org/negotiator/-/negotiator-0.4.7.tgz"
   integrity sha512-ujxWwyRfZ6udAgHGECQC3JDO9e6UAsuItfUMcqA0Xf2OLNQTveFVFx+fHGIJ5p0MJaJrZyGQqPwzuN0NxJzEKA==
 
-next@12.3.1:
+next@^12.3.1:
   version "12.3.1"
   resolved "https://registry.npmjs.org/next/-/next-12.3.1.tgz"
   integrity sha512-l7bvmSeIwX5lp07WtIiP9u2ytZMv7jIeB8iacR28PuUEFG5j0HGAPnMqyG5kbZNBG2H7tRsrQ4HCjuMOPnANZw==
