@@ -64,6 +64,7 @@ export default function CreateNewWallet() {
     const result = await response.json()
         if (result) {
           alert("submited!");
+          router.push('/user-dashboard');
         }  
   };
 
