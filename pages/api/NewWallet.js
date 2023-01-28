@@ -25,9 +25,11 @@ import clientPromise from "../../lib/mongo";
 export default async function handler(req, res) {
   const client = await clientPromise;
   const db = client.db("CRYPTOLOCK-APP-DB");
+  console.log("called");
   switch (req.method) {
     case "POST":
       let bodyObject = req.body;
+      console.log("sent");
       let newPost = await db.collection("users").insertOne(bodyObject);
       res.json({
         status: 200,

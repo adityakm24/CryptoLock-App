@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useAccount, useProvider } from "wagmi";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import  useRouter  from "next/router";
 
 export default function DashboardNew() {
   const account = useAccount();

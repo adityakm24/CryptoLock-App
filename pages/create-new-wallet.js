@@ -9,7 +9,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useAccount, useNetwork } from "wagmi";
 import { useEffect, useState } from "react";
-import  useIsMounted  from "./hooks/useIsMounted";
+import useIsMounted from "./hooks/useIsMounted";
 
 export default function CreateNewWallet() {
   const account = useAccount();
