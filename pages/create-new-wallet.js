@@ -16,20 +16,20 @@ export default function CreateNewWallet() {
   const router = useRouter();
   const mounted = useIsMounted();
   const { chain, chains } = useNetwork();
-  
- 
 
   const [OWChainName, setOWChainName] = useState("");
   const [OAddress, setOAddress] = useState("");
   const [PWallName, setPWallName] = useState("");
   const [OWName, setOWName] = useState("");
 
- useEffect(() => {
-   // Update the document title using the browser API
-   if (account.isConnected) { setOAddress(account.address); setOWChainName(chain.name)};
- });
+  useEffect(() => {
+    // Update the document title using the browser API
+    if (account.isConnected) {
+      setOAddress(account.address);
+      setOWChainName(chain.name);
+    }
+  });
 
-  
   // Handles the submit event on form submit.
   const handleSubmit = async (event) => {
     // Stop the form from submitting and refreshing the page.
@@ -58,16 +58,17 @@ export default function CreateNewWallet() {
 
     // Send the form data to our forms API on Vercel and get a response.
     const response = await fetch(endpoint, options);
-    
+
     // Get the response data from server as JSON.
     // If server returns the name submitted, that means the form works.
-    const result = await response.json()
-        if (result) {
-          alert("submited!");
-          router.push('/user-dashboard');
-        }  
+    const result = await response.json();
+    if (result.status = 200) {
+      alert("submited!");
+      router.push({
+        pathname: "/user-dashboard",
+      });
+    }
   };
-
 
   return (
     <div

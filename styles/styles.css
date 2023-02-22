@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap");
 .create-wallet {
   background-color: rgb(46, 46, 46);
   width: 500px;
@@ -7,33 +7,32 @@
   margin: 20px;
   align-items: center;
   text-align: center;
-
 }
 
 .button-create {
-    background-color: blue;
-    border: 0px;
-    border-radius: 10px;
-    font-size: 15px;
-    padding: 13px;
-    padding-left: 25px;
-    padding-right: 25px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    animation-duration: 1.5s;
+  background-color: blue;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 13px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  animation-duration: 1.5s;
 }
 
 .button-create:hover {
-    background-color: rgb(4, 4, 225);
-    border: 0px;
-    border-radius: 10px;
-    font-size: 15px;
-    padding: 13px;
-    padding-left: 25px;
-    padding-right: 25px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    animation-duration: 1.5s;
+  background-color: rgb(4, 4, 225);
+  border: 0px;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 13px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  animation-duration: 1.5s;
 }
 
 .signup {
@@ -45,4 +44,55 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+}
+
+.sidenavud {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: -7;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+   margin-top: 40px;
+}
+
+.sidenavud svg {
+  word-spacing: 20px;
+}
+
+.sidenavud a {
+  padding: 10px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  margin-top: 20px;
+  border-radius: 5px;
+ 
+}
+
+.sidenavud a:hover {
+  color: rgb(255, 255, 255);
+  background-color: #af9c9c33 ;
+  border-radius: 5px;
+}
+
+.sidenavud a.active {
+  color: rgb(255, 255, 255);
+  background-color: #af9c9c67 ;
+  border-radius: 5px;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenavud */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenavud {padding-top: 15px;}
+  .sidenavud a {font-size: 18px;}
 }

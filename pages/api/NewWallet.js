@@ -29,12 +29,19 @@ export default async function handler(req, res) {
   switch (req.method) {
     case "POST":
       let bodyObject = req.body;
-      console.log("sent");
-      let newPost = await db.collection("users").insertOne(bodyObject);
-      res.json({
-        status: 200,
-        data: `Are you sure the given information is correct?`,
-      });
+      console.log(req.body.OAddress);
+      if (db.collection("users").find({ OAddress: req.body.OAddress })) {
+        res.json({
+          status: 200,
+          data: `User Already present`,
+        });
+      } else {
+        let newPost = await db.collection("users").insertOne(bodyObject);
+        res.json({
+          status: 400,
+          data: `Are you sure the given information is correct?`,
+        });
+      }
       break;
     /*
     case "GET":
