@@ -46,44 +46,62 @@
   gap: 2rem;
 }
 
-.sidenavud {
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  z-index: 9999 ;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 12px;
+  text-decoration: none;
+  font-size: 20px;  
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.topnav-right {
+  float: right;
+   margin-top: 10px;
+}
+.topnav-right button {
+    margin-top: 10px;
+}
+.sidenav {
   height: 100%;
   width: 160px;
   position: fixed;
-  z-index: -7;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
-   margin-top: 40px;
+  margin-top: 54px
 }
 
-.sidenavud svg {
-  word-spacing: 20px;
-}
-
-.sidenavud a {
-  padding: 10px 8px 6px 16px;
+.sidenav a {
+  padding: 20px 8px 6px 16px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 25px;
   color: #818181;
   display: block;
-  margin-top: 20px;
-  border-radius: 5px;
- 
 }
-
-.sidenavud a:hover {
-  color: rgb(255, 255, 255);
-  background-color: #af9c9c33 ;
-  border-radius: 5px;
-}
-
-.sidenavud a.active {
-  color: rgb(255, 255, 255);
-  background-color: #af9c9c67 ;
-  border-radius: 5px;
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
 .main {
@@ -93,6 +111,6 @@
 }
 
 @media screen and (max-height: 450px) {
-  .sidenavud {padding-top: 15px;}
-  .sidenavud a {font-size: 18px;}
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

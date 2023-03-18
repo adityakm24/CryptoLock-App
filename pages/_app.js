@@ -3,7 +3,8 @@ import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import "../styles/globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
-import styles from "../styles/styles.css";
+import "../styles/styles.css";
+import "../styles/globals.css";
 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygonMumbai, chain.goerli],

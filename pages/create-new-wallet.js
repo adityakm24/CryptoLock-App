@@ -7,9 +7,12 @@ import {
 } from "@rainbow-me/rainbowkit";
 import Head from "next/head";
 import Image from "next/image";
+import { getSession } from "next-auth/react";
 import { useAccount, useNetwork } from "wagmi";
 import { useEffect, useState } from "react";
 import useIsMounted from "./hooks/useIsMounted";
+
+
 
 export default function CreateNewWallet() {
   const account = useAccount();
@@ -62,8 +65,9 @@ export default function CreateNewWallet() {
     // Get the response data from server as JSON.
     // If server returns the name submitted, that means the form works.
     const result = await response.json();
-    if (result.status = 200) {
-      alert("submited!");
+    if ((result.status = 200)) {
+      alert(result.data);
+      console.log(result.data)
       router.push({
         pathname: "/user-dashboard",
       });
@@ -84,7 +88,16 @@ export default function CreateNewWallet() {
       <ConnectButton />
       <br />
       {mounted ? (
-        <div>
+        <div
+          style={{
+            height: "100vh",
+            width: "100vw",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           {account.isConnected && (
             <form onSubmit={handleSubmit} className="signup">
               <label htmlFor="OAddress">Address</label>
