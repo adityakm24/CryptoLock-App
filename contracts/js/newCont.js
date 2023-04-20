@@ -3,7 +3,7 @@ const { ethers } = require("ethers");
 const NewContract = async () => {
     console.log("inside")
     const provider = new ethers.providers.JsonRpcProvider(
-        "https://eth-goerli.g.alchemy.com/v2/Y-7JwsH2zFboSAiv6dCjI9pNkLjsb3RU"
+      "https://eth-goerli.g.alchemy.com/v2/-gilIAlMeouvUeUX7rFQF0_uzuNI6FNs"
     );
 
     const walletName = new ethers.Wallet(

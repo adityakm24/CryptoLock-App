@@ -45,10 +45,9 @@ export default function DashboardNew() {
             <div>
               <div className="sidenav">
                 <a> </a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#clients">Clients</a>
-                <a href="#contact">Contact</a>
+                <a href="/addSigner">Add Signer </a>
+                <a href="#services">Remove Signer </a>
+                <a href="#clients">Update Maximum Signers </a>
               </div>
 
               <div className="main">

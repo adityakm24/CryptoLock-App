@@ -28,6 +28,20 @@ export default async function handler(req, res) {
         });
       }
       break;
-
+    case "GET":
+      if (
+        (await db
+          .collection("users")
+          .findOne({ OAddress: req.body.OAddress })) != null
+      ) {
+        const allData = await db.collection("users").findOne({ OAddress: req.body.OAddress })).toArray();
+        res.json({ status: 200, data: allPosts });
+      }
+      else {
+        res.json({
+          status: 400,
+          data: `No user present`
+        )}
+      break;
   }
 }
